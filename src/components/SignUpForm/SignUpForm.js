@@ -5,7 +5,7 @@ import {signUp} from '../../utilities/users-service'
 
 // SignUpForm.jsx <--> users-service.js <--> users-api.js 
 // <-Internet-> routes/users.js <--> controller/users.js
-function SignUpForm(){
+function SignUpForm({setUser}){
 const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -33,7 +33,7 @@ delete userFormData.error
 //calling user service signUp function
 const user = await signUp(userFormData)
 console.log('USER', user)
-
+setUser(user)
 }catch(error){
     console.log(error)
     setFormData({
