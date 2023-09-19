@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
+import YourBizHere from "../../assests/YourBizHere.png"
 
 export default function LoginForm({ setUser }) {
 const [credentials, setCredentials] = useState({
@@ -30,6 +31,7 @@ async function handleSubmit(evt) {
 return (
   <div>
     <div className="form-container" onSubmit={handleSubmit}>
+      <img src={YourBizHere} alt="logo" />
       <form autoComplete="off" >
         <label>Email</label>
         <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
