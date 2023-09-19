@@ -32,7 +32,7 @@ delete userFormData.error
 
 //calling user service signUp function
 const user = await signUp(userFormData)
-console.log('USER', user)
+// console.log('USER', user)
 setUser(user)
 }catch(error){
     console.log(error)

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
-import YourBizHere from "../../assests/YourBizHere.png"
+import YourBizHere from "../../assests/YourBizHere.gif"
 
 export default function LoginForm({ setUser }) {
 const [credentials, setCredentials] = useState({

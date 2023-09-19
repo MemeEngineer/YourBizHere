@@ -25,6 +25,7 @@ const userSchema = new Schema({
         transform: function(doc,ret){
             delete ret.password;
             return ret
+            //removes password from showing up on db
         }
     }
 });
