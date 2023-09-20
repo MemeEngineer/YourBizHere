@@ -1,10 +1,10 @@
 import styles from './Logo.module.css';
+import YourBizHere from '../../assets/YourBizHere.gif'
 
 export default function Logo() {
 return (
   <div className={styles.Logo}>
-    <div>SEI</div>
-    <div>CAFE</div>
+   <img src={YourBizHere}/>
   </div>
 );
 }
