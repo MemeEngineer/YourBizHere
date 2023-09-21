@@ -18,12 +18,13 @@ async function create(req, res) {
 }
 
 async function update(req, res){
-  const {id} = req.params
-  console.log(req.body)
+  // const {id} = req.params
+  // console.log(req.body)
   try{
     console.log(req.user)
     const dbUser = await User.findById(req.user._id)
     console.log('OLD password',dbUser)
+    //matching old password with password in db
     const match = await bcrypt.compare(req.body.password, dbUser.password)
     
 if(!match){

@@ -4,7 +4,7 @@ const ensureLoggedIn = require('../../config/ensureLoggedIn.js')
 const router = express.Router()
 
 
- router.delete('/delete',usersCtrl.deleteUser)
+router.delete('/delete',usersCtrl.deleteUser)
 router.put('/update',ensureLoggedIn, usersCtrl.update)
 
 //POST
