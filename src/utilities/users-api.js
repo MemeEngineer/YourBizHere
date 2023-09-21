@@ -8,6 +8,14 @@ export function signUp(userData) {
   export function login(credentials) {
     return sendRequest(`${BASE_URL}/login`, 'POST', credentials);
   }
+
+export function updateInfo(userData){
+  return sendRequest(`${BASE_URL}/update`, 'PUT', userData)
+}
+
+export function deleteUser(){
+  return sendRequest(`${BASE_URL}/delete`, 'DELETE')
+}
   
 export function checkToken(){
     return sendRequest(`${BASE_URL}/check-token`)

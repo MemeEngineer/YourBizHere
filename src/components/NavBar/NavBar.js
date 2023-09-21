@@ -12,10 +12,11 @@ function NavBar({user, setUser}){
     }
     return(
         <nav className={styles.NavBar}>
-            <img src={YourBizHere}/>
+            <img src={YourBizHere} alt="logo"/>
             <h3>Welcome, {user.name}</h3>
             <Link to="/orders"> Order History </Link> &nbsp; | &nbsp;
             <Link to='/orders/new'> New Order </Link> &nbsp; | &nbsp;
+            <Link to='/settings'>Settings</Link> &nbsp; | &nbsp;
             <Link to='' onClick={handleLogOut}>Log Out</Link>
         </nav>
     )

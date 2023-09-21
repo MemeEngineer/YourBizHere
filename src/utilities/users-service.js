@@ -18,6 +18,7 @@ export async function logOut(){
   localStorage.removeItem('Token')
 }
 
+
 export async function checkToken(){
 const dateStr = await usersApi.checkToken()
 return new Date(dateStr)

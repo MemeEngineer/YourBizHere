@@ -6,6 +6,7 @@ import OrderHistoryPage from './pages/OrderHistoryPage';
 import NavBar from './components/NavBar/NavBar';
 import {getUser} from "./utilities/users-service"
 import styles from './App.module.css';
+import Settings from './pages/Settings'
 
 function App() {
   const [user, setUser] = useState(getUser())
@@ -18,6 +19,7 @@ function App() {
      <Routes>
         <Route path="/orders/new" element={<NewOrderPage user={user} setUser={setUser}/>} />
         <Route path="/orders" element={<OrderHistoryPage user={user} setUser={setUser}/>} />
+        <Route path="/settings" element= {<Settings user={user} setUser={setUser}/>} />
         <Route path="/*" element={<Navigate to="/orders/new" />} />
       </Routes>
       </>
