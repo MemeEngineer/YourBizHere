@@ -7,6 +7,7 @@ import NavBar from './components/NavBar/NavBar';
 import {getUser} from "./utilities/users-service"
 import styles from './App.module.css';
 import Settings from './pages/Settings'
+import AdminDashBoard from './pages/AdminDashBoard';
 
 function App() {
   const [user, setUser] = useState(getUser())
@@ -20,6 +21,7 @@ function App() {
         <Route path="/orders/new" element={<NewOrderPage user={user} setUser={setUser}/>} />
         <Route path="/orders" element={<OrderHistoryPage user={user} setUser={setUser}/>} />
         <Route path="/settings" element= {<Settings user={user} setUser={setUser}/>} />
+        <Route path="/admin" element={<AdminDashBoard/>}/>
         <Route path="/*" element={<Navigate to="/orders/new" />} />
       </Routes>
       </>

@@ -17,7 +17,9 @@ function NavBar({user, setUser}){
             <Link to="/orders"> Order History </Link> &nbsp; | &nbsp;
             <Link to='/orders/new'> New Order </Link> &nbsp; | &nbsp;
             <Link to='/settings'>Settings</Link> &nbsp; | &nbsp;
+            {user.isAdmin ? (<Link to='/admin'>DashBoard</Link>) : null}&nbsp; | &nbsp;
             <Link to='' onClick={handleLogOut}>Log Out</Link>
+        
         </nav>
     )
 }

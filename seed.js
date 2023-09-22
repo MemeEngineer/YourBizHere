@@ -1,8 +1,10 @@
 require('dotenv').config();
 require('./config/database');
+const jwt = require("jsonwebtoken");
 
 const Category = require('./models/category');
 const Item = require('./models/item');
+const User = require('./models/user');
 
 (async function() {
 
@@ -63,8 +65,19 @@ const Item = require('./models/item');
     {name: 'Tea', emoji: '🍵', category: categories[3], price: 2.95},
   ]);
 
-  console.log(items)
+  await User.findOneAndDelete({email: "admin@gmail.com"})
+   
+  const user = await User.create([ 
+{name: 'admin',
+  email: 'admin@gmail.com',
+  password:'admin123',
+  isAdmin: true
 
+}
+  ]);
+  
+  console.log(items)
+  console.log(user)
   process.exit();
 
 })();

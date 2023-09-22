@@ -19,7 +19,8 @@ const userSchema = new Schema({
       trim: true,
       minLength: 3,
       required: true
-    }
+    },
+    isAdmin:{type: Boolean, default: false}
   }, {timestamps: true,
     toJSON: {
         transform: function(doc,ret){
