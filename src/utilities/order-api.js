@@ -17,6 +17,7 @@ export function addItemToCart(itemId) {
 // Will add the item to the order if not currently in the cart
 // Sending info via the data payload instead of a long URL
 export function setItemQtyInCart(itemId, newQty) {
+  
   return sendRequest(`${BASE_URL}/cart/qty`, 'PUT', { itemId, newQty });
 }
 
@@ -29,4 +30,8 @@ export function checkout() {
 // Return all paid orders for the logged in user
 export function getOrderHistory() {
   return sendRequest(`${BASE_URL}/history`);
+}
+
+export function getItemHistory(){
+  return sendRequest(`${BASE_URL}/historyitem`)
 }

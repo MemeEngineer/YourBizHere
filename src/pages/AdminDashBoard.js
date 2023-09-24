@@ -1,10 +1,10 @@
-import BarGraph from '../components/BarGraph/bar.js'
+import Bar from '../components/BarGraph/BarGraph.js'
 
 function adminDashBoard(){
     return(
         <div>
             <h1>DASHBOARD</h1>
-            <BarGraph/>
+            <Bar/>
         </div>
     )
 }

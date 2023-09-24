@@ -10,7 +10,7 @@ function Settings({ user, setUser }) {
     confirm: "",
     error: "",
   });
-  console.log(user, setUser);
+ 
   const disable = formData.newpassword !== formData.confirm;
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value, error: "" });

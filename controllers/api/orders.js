@@ -6,7 +6,8 @@ module.exports = {
   addToCart,
   setItemQtyInCart,
   checkout,
-  history
+  history,
+  getItems
 };
 
 // A cart is the unpaid order for a user
@@ -65,4 +66,16 @@ async function history(req, res) {
     res.status(400).json({ msg: e.message });
   }
 
+}
+
+//get items
+async function getItems(req, res){
+  try{
+    const orders = await Order
+      .find({isPaid: true})
+      .sort('-updatedAt').exec();
+    res.status(200).json(orders);
+  }catch(e){
+    res.status(400).json({ msg: e.message });
+  }
 }
