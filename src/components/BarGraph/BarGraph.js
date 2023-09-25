@@ -10,7 +10,7 @@ import {
   } from "recharts";
   import * as ordersAPI from '../../utilities/order-api';
   import React, { useState, useEffect } from 'react';
-
+import './BarGraph.css'
   
   function BarGraph(){
     const [itemCount, setItemCount]= useState([])
@@ -24,7 +24,7 @@ import {
       fetchItemOrders();
     }, []);
 
-    console.log(itemCount.length)
+
     const chartData = {}
     itemCount.forEach((order) =>{
       order.lineItems.forEach((item)=> {
@@ -33,7 +33,7 @@ import {
 
       })
     })
-console.log(chartData)
+
 // console.log(Object.keys(chartData))
 // console.log(Object.values(chartData))
 const data = [];
@@ -46,30 +46,73 @@ name.forEach((element) => {
   data.push(dataValue)
 })
 
-// console.log(data)
+//  console.log(data)
 
+ let totalRevenue = 0;
+ let totalItemCount =0;
+ itemCount.forEach((order) =>{
+    
+    totalRevenue += order.orderTotal
+    totalItemCount += order.totalQty
+
+  })
+  // console.log(totalRevenue)
+  // console.log(totalItemCount)
   return (
     <div>
         
     <BarChart
       width={800}
-      height={300}
+      height={350}
       data={data}
       margin={{
         top: 5,
         right: 30,
         left: 20,
-        bottom: 5
+        bottom: 80
       }}
+      
     >
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="name" />
+      <XAxis dataKey="name" angle={-45} textAnchor="end" />
       <YAxis />
       <Tooltip />
-      <Legend />
+      {/* <Legend /> */}
       
-      <Bar dataKey="value" fill="#82ca9d" />
+      <Bar dataKey="value" fill="#000000"/>
     </BarChart>
+    <table className="table">
+      <thead>
+        <tr>
+          <th>Total Revenue</th>
+          <th># of Items Sold</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>${totalRevenue}</td>
+          <td>{totalItemCount}</td>
+        </tr>
+      </tbody>
+    </table>
+    {/* <table>
+      <thead>
+        <tr>
+          <th>Items</th>
+          <th>Amount Sold</th>
+        </tr>
+      </thead>
+      <tbody>
+        {data.map((key) => {
+            return(
+              <tr>
+              <td>{key}</td>
+              </tr>
+            )
+          })}
+        
+      </tbody>
+    </table> */}
     </div>
   );
 }
