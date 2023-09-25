@@ -31,6 +31,7 @@ async function handleSubmit(evt) {
 
 return (
   <div>
+    <p className="error-message">&nbsp;{error}</p>
     <div className="form-container"  style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems:"center"}}onSubmit={handleSubmit}>
       <img src={YourBizHere} alt="logo" />
       <form autoComplete="off" >
@@ -41,7 +42,7 @@ return (
         <button type="submit">LOG IN</button>
       </form>
     </div>
-    <p className="error-message">&nbsp;{error}</p>
+    
   </div>
 );
 }

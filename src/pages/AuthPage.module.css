@@ -13,3 +13,10 @@
     color: var(--text-light);
     cursor: pointer;
   }
+
+  .AuthForm{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+
+  }

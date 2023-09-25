@@ -45,6 +45,7 @@ setUser(user)
 
     return(
         <div>
+            <p className= 'error-message'>{formData.error}</p>
         <div className="form-container">
             <form autoComplete='off' onSubmit ={handleSubmit}>
                 <label>Name</label>
@@ -62,7 +63,7 @@ setUser(user)
                 <button type='submit' disabled={disable}>Sign Up</button>
             </form>
         </div>
-        <p className= 'error-message'>{formData.error}</p>
+        
         </div>
     )
 }

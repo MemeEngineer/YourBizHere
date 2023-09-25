@@ -90,7 +90,7 @@ name.forEach((element) => {
       </thead>
       <tbody>
         <tr>
-          <td>${totalRevenue}</td>
+          <td>${totalRevenue.toFixed(2)}</td>
           <td>{totalItemCount}</td>
         </tr>
       </tbody>
