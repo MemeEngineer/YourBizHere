@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import * as usersService from '../../utilities/users-service';
 import YourBizHere from "../../assets/YourBizHere.gif"
+import './LoginForm.module.css'
 
 export default function LoginForm({ setUser }) {
 const [credentials, setCredentials] = useState({
@@ -30,7 +31,7 @@ async function handleSubmit(evt) {
 
 return (
   <div>
-    <div className="form-container" onSubmit={handleSubmit}>
+    <div className="form-container"  style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems:"center"}}onSubmit={handleSubmit}>
       <img src={YourBizHere} alt="logo" />
       <form autoComplete="off" >
         <label>Email</label>
