@@ -19,7 +19,7 @@ import './BarGraph.css'
       async function fetchItemOrders() {
         const orders = await ordersAPI.getItemHistory();
         setItemCount(orders)
-        console.log(orders)
+        // console.log(orders)
       }
       fetchItemOrders();
     }, []);

@@ -2,3 +2,22 @@ img{
     height: 10em;
     width: 10em;
 }
+
+.NavBar{
+    display: "flex";
+    flex-direction: 'row';
+    width: "50px";
+    padding: "12px";
+    margin: "0 6px 6px";
+    background: "Black";
+    text-decoration: "none";
+    color: "White";
+    
+}
+
+.NavBar a:hover{
+ background-color: black;
+ color: white;
+ 
+}
+
