@@ -10,6 +10,7 @@ import {
   } from "recharts";
   import * as ordersAPI from '../../utilities/order-api';
   import React, { useState, useEffect } from 'react';
+
   
   function BarGraph(){
     const [itemCount, setItemCount]= useState([])
@@ -24,46 +25,34 @@ import {
     }, []);
 
     console.log(itemCount.length)
-    const data = [
-      {
-        name: "Page A",
-        uv: 4000,
+    const chartData = {}
+    itemCount.forEach((order) =>{
+      order.lineItems.forEach((item)=> {
         
-      },
-      {
-        name: "Page B",
-        uv: 3000,
-       
-      },
-      {
-        name: "Page C",
-        uv: 2000,
-      },
-      {
-        name: "Page D",
-        uv: 2780,
-      },
-      {
-        name: "Page E",
-        uv: 1890,
-      },
-      {
-        name: "Page F",
-        uv: 2390,
+        chartData[item.item.name] ? chartData[item.item.name] += item.qty : chartData[item.item.name] = item.qty
 
-      },
-      {
-        name: "Page G",
-        uv: 3490,
-      }
-    ];
+      })
+    })
+console.log(chartData)
+// console.log(Object.keys(chartData))
+// console.log(Object.values(chartData))
+const data = [];
+const name = Object.keys(chartData)
+// const value = Object.values(chartData)
+name.forEach((element) => {
+  const dataValue = {}
+  dataValue['name'] = element
+  dataValue['value'] = chartData[element]
+  data.push(dataValue)
+})
 
+// console.log(data)
 
   return (
     <div>
         
     <BarChart
-      width={500}
+      width={800}
       height={300}
       data={data}
       margin={{
@@ -79,7 +68,7 @@ import {
       <Tooltip />
       <Legend />
       
-      <Bar dataKey="uv" fill="#82ca9d" />
+      <Bar dataKey="value" fill="#82ca9d" />
     </BarChart>
     </div>
   );
