@@ -21,15 +21,15 @@ Building on top of an E-commerece market application. Users are able to Create, 
 - Bcrypt (Password encrpytion, hashing and salting)
 
 ## Flow Diagram of CRUD / FULL Stack
-![Alt text](image.png)
+![Alt text](FlowDiagram.png)
 
 ## Wireframes
-![Alt text](030031D6-6210-4ACE-BAC1-00B745DD3887.png)
-![Alt text](image-1.png)
-![Alt text](image-2.png)
+![Alt text](login-signup.png)
+![Alt text](MainMenu.png)
+![Alt text](Admindashboard.png)
 
 ## Entity Relationship Diagram (ERD)
-![Alt text](image-3.png)
+![Alt text](ERD.png)
 
 # Commands/Dependencies
 
@@ -78,3 +78,10 @@ Building on top of an E-commerece market application. Users are able to Create, 
 ## serve-favicon (middleware)
 `npm install serve-favicon`
 
+# Improvements
+- Styling
+- Making acutal item cards with food / real items examples for menu
+- Incorporate time to graphs to see busy hours
+- Add financial payment processing (Stripe?)
+- Add more statistical and logical analysis for admin access
+- Add more capabilities (admin access) to delete users and orders
