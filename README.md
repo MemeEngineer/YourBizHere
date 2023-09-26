@@ -1,6 +1,8 @@
 # Live Demo:
 https://yourbizhere.onrender.com
 
+![Alt text](YourBizHere.gif)
+
 # About
 Template E-commerce website for business (restaurants or retail) with administrative capabilites for statistical & logistical analysis of orders and items.
 
