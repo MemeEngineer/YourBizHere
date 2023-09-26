@@ -1,0 +1,10 @@
+.dashboard{
+    background-color: var(--white);
+    border-radius: 2vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    margin: 3vmin 2vmin;
+}

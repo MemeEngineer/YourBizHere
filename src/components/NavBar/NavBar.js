@@ -31,24 +31,28 @@ function NavBar({ user, setUser }) {
         <img src={YourBizHere} alt="logo" />
       </Link>
       <h3>Welcome {user.name}!</h3>
-      <Link to="/orders" style={{ textDecoration: "none"}} >
+      <Link to="/orders">
+        <button style={{fontSize: "14px"}}>Order History</button>
         
-        Order History
       </Link>
-      <Link to="/orders/new" style={{ textDecoration: "none"}}>
-        
+      <Link to="/orders/new">
+        <button style={{fontSize: "14px"}}>
+
         New Order
+        </button>
       </Link>
-      <Link to="/settings" style={{ textDecoration: "none" }}>
-        Settings
+      <Link to="/settings">
+       <button style={{fontSize: "14px"}}>
+       Settings
+        </button> 
       </Link>
       {user.isAdmin ? (
-        <Link to="/admin" style={{ textDecoration: "none" }}>
-          DashBoard
+        <Link to="/admin">
+          <button style={{fontSize: "14px"}}>DashBoard</button>
         </Link>
       ) : null}
-      <Link to="" onClick={handleLogOut} style={{ textDecoration: "none" }}>
-        Log Out
+      <Link to="" onClick={handleLogOut} s>
+        <button style={{fontSize: "14px"}}>Log Out</button>
       </Link>
     </nav>
   );

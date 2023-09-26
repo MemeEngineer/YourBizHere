@@ -3,7 +3,7 @@ img{
     width: 10em;
 }
 
-.NavBar{
+.NavBar button{
     display: "flex";
     flex-direction: 'row';
     width: "50px";
@@ -15,9 +15,10 @@ img{
     
 }
 
-.NavBar a:hover{
- background-color: black;
- color: white;
+.NavBar button:hover{
+ 
+ background-color: green;
+ padding: 10px;
  
 }
 
