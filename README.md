@@ -21,12 +21,12 @@ Building on top of an E-commerece market application. Users are able to Create, 
 - Bcrypt (Password encrpytion, hashing and salting)
 
 ## Flow Diagram of CRUD / FULL Stack
-![Alt text](FlowDiagram.png)
+![Alt text](CRUD-flow-diagram.png)
 
 ## Wireframes
 ![Alt text](login-signup.png)
-![Alt text](MainMenu.png)
-![Alt text](Admindashboard.png)
+![Alt text](MainPage.png)
+![Alt text](Admindash.png)
 
 ## Entity Relationship Diagram (ERD)
 ![Alt text](ERD.png)
