@@ -33,11 +33,14 @@
     align-items: center;
     font-size: 1.5vw;
     color: var(--text-dark);
+    
   }
   
   .OrderDetail .total span.right {
     display: flex;
     justify-content: flex-end;
+    margin: -50px;
+    
   }
   
   .OrderDetail .hungry {

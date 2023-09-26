@@ -12,7 +12,7 @@ return (
       {!isPaid &&
         <button
           className="btn-xs"
-          onClick={() => handleChangeQty(lineItem.item._id, lineItem.qty - 1)}
+          onClick={() => handleChangeQty(lineItem.item._id, lineItem.qty - 1)} 
         >−</button>
       }
       <span>{lineItem.qty}</span>
@@ -23,7 +23,7 @@ return (
         >+</button>
       }
     </div>
-    <div className={styles.extPrice}>${lineItem.extPrice.toFixed(2)}</div>
+    <div className={styles.extPrice} style={{margin: '-50px'}}>${lineItem.extPrice.toFixed(2)}</div>
   </div>
 );
 }
