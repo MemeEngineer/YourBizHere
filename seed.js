@@ -19,6 +19,7 @@ const User = require('./models/user');
     {name: 'Sandwiches', sortOrder: 70},
     {name: 'Seafood', sortOrder: 80},
     {name: 'Sides', sortOrder: 90},
+    {name: 'Memes', sortOrder:100}
   ]);
 
   await Item.deleteMany({});
@@ -63,6 +64,11 @@ const User = require('./models/user');
     {name: 'Pancakes', emoji: '🥞', category: categories[0], price: 7.95},
     {name: 'Bacon', emoji: '🥓', category: categories[0], price: 3.95},
     {name: 'Tea', emoji: '🍵', category: categories[3], price: 2.95},
+    {name: 'Fishing', emoji: '🎣', category: categories[9], price: 10000},
+    {name: 'GigaChad', emoji:'🗿', category: categories[9], price: 1000},
+    {name: 'Michael Johnny', emoji:'🏀', category: categories[9], price: 100000},
+    {name: 'Built Different', emoji:'💪', category: categories[9], price: 1000},
+    {name:'Yeehaw!', emoji:"🤠", category:categories[9], price: 10}
   ]);
 
   await User.findOneAndDelete({email: "admin@gmail.com"})
