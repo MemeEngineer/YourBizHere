@@ -29,6 +29,11 @@ async function handleSubmit(evt) {
   }
 }
 
+function adminLogin(){
+setCredentials({email: "admin@gmail.com", password:"admin123"})
+}
+
+
 return (
   <div>
     <p className="error-message">&nbsp;{error}</p>
@@ -40,7 +45,9 @@ return (
         <label>Password</label>
         <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
         <button type="submit">LOG IN</button>
+        
       </form>
+      <button type="submit" onClick={adminLogin}> ADMIN LOG IN</button>
     </div>
     
   </div>

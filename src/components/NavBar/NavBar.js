@@ -32,27 +32,27 @@ function NavBar({ user, setUser }) {
       </Link>
       <h3>Welcome {user.name}!</h3>
       <Link to="/orders">
-        <button style={{fontSize: "14px"}}>Order History</button>
+        <button style={{fontSize: "20px"}}>Order History</button>
         
       </Link>
       <Link to="/orders/new">
-        <button style={{fontSize: "14px"}}>
+        <button style={{fontSize: "20px"}}>
 
         New Order
         </button>
       </Link>
       <Link to="/settings">
-       <button style={{fontSize: "14px"}}>
+       <button style={{fontSize: "20px"}}>
        Settings
         </button> 
       </Link>
       {user.isAdmin ? (
         <Link to="/admin">
-          <button style={{fontSize: "14px"}}>DashBoard</button>
+          <button style={{fontSize: "20px"}}>DashBoard</button>
         </Link>
       ) : null}
       <Link to="" onClick={handleLogOut} s>
-        <button style={{fontSize: "14px"}}>Log Out</button>
+        <button style={{fontSize: "20px"}}>Log Out</button>
       </Link>
     </nav>
   );
