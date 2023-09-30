@@ -4,7 +4,7 @@ https://yourbizhere.onrender.com
 ![Alt text](YourBizHere.gif)
 
 # About
-Template E-commerce website for business (restaurants or retail) with administrative capabilites for statistical & logistical analysis of orders and items.
+Template E-commerce website for business (restaurants or retail) with administrative capabilities for statistical & logistical analysis of orders and items.
 
 # Approach
 Building on top of an E-commerece market application. Users are able to Create, Update, Delete (CRUD) their accounts and make orders of items on the menu. If user has admin privilege they are able to access a dashboard (C[R]UD) graphing the orders of all users and count of item quantity. Along with some revenue and item count.
